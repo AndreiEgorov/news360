@@ -34,7 +34,7 @@ app.use('/loyal-users', loyalUsersRoutes);
 app.use((req, res, next) => {
   const error = new Error(
     'This url does not return any data, please type another url, Ex: http://localhost:3000/unique-users?device=1,2&os=1',
-  ); //Error is global object
+  );
   error.status = 404;
   next(error);
 });
